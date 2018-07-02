@@ -6,6 +6,7 @@ Page({
   data: {
     
   },
+  
   start: function(){
     //跳转到子页面，子页面自动添加返回按钮
     //  wx.navigateTo({
