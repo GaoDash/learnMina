@@ -8,7 +8,7 @@
   </swiper>
 
   <!--新闻列表  -->
-  <block wx:for="{{posts_content}}" wx:for-item="item" wx:for-index="idx">
+  <block wx:for="{{posts_content}}" wx:for-item="item" wx:for-index="idx" wx:key="">
     <view class='post-container'>
       <view class='post-author-date'>
         <image class='post-author' src='{{item.auth_image}}'></image>

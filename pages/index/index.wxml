@@ -3,6 +3,6 @@
   <image class='user-avatar' src='../../assets/images/v2-4f96b4095f11618d6bc74b60bc6a4a76_t.jpg'></image>
   <text>hello, 小楼</text>
   <view class='page__bd'>
-    <button>开启小程序之旅</button>
+    <button bindtap='start'>开启小程序之旅</button>
   </view>
 </view>
