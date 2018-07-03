@@ -1,2 +1,25 @@
-<!--pages/posts/post-detail.wxml-->
-<text>pages/posts/post-detail.wxml</text>
+<view class='page-container'>
+  <image class='post-banner' src='{{headImgSrc}}'></image>
+  <image class='audio' src='/assets/images/music/music-start.png'></image>
+  <view class='post-author'>
+    <image src='{{avatar}}'></image>
+    <text class='post-author-name'>{{author}}</text>
+    <text class='post-author-time'>发表于</text>
+    <text class='post-author-time'>{{dateTime}}</text>
+  </view>
+
+  <view class='post-title'>
+    <text>{{title}}</text>
+  </view>
+
+  <view class='post-share'>
+    <image catchtap='onCollectedTap' wx:if='{{collected}}' src='/assets/images/icon/collection.png'></image>
+    <image catchtap='onCollectedTap' wx:else src='/assets/images/icon/collection-anti.png'></image>
+    <image src='/assets/images/icon/share.png'></image>
+  </view>
+
+  <view class='post-article'>
+      <text>{{detail}}</text>
+  </view>
+
+</view>

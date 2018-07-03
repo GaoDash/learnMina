@@ -1,7 +1,7 @@
 /**index.wxss**/
 page{
   height: 100%;
-  background-color: #b3d4bd;
+  background-color: #45c7c9;
 }
 .user-avatar{
   width: 200rpx;
@@ -9,7 +9,10 @@ page{
   border-radius: 50%; 
   margin-bottom: 20rpx;
 }
-
+.hello{
+  font-size: 42rpx;
+  color: #333;
+}
 .page__bd{
   margin-top: 200rpx;
 }

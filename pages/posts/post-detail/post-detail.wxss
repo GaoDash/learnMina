@@ -1,1 +1,81 @@
-/* pages/posts/post-detail.wxss */
+.page-container{
+  display: flex;
+  flex-direction: column;
+}
+.post-banner{
+  width: 100%;
+  height: 480rpx;
+}
+.post-author{
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  padding-left: 30rpx;
+  color: #666;
+}
+.post-author image{
+  width: 80rpx;
+  height: 80rpx;
+  vertical-align: middle;
+}
+.post-author-name{
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: 32rpx;
+  vertical-align: middle;
+}
+.post-author-time{
+  vertical-align: -2rpx;
+  margin-left: 10px;
+}
+.post-share{
+  padding-right: 40rpx;
+  text-align: right;
+  position: relative;
+  height: 92rpx;
+  margin-top: 20rpx;
+}
+.post-share image{
+  height: 92rpx;
+  width: 92rpx;
+  margin-left: 40rpx;
+}
+.post-share::after{
+  width: 660rpx;
+  height: 1px;
+  background-color: #e5e5e5;
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 50%;
+  margin-left: -330rpx;
+  z-index: -99;
+}
+.post-title{
+  margin-left: 45rpx;
+}
+.post-title text{
+  font-size: 36rpx;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #4b556c;
+}
+.post-article {
+  text-align: left;
+  text-indent: 60rpx;
+  padding: 0 20rpx;
+  margin-top: 30rpx;
+}
+.post-article text{
+  color: #666;
+  font-size: 30rpx;
+  letter-spacing: 1px;
+}
+.audio{
+  position: absolute;
+  left: 50%;
+  margin-left: -51rpx;
+  width: 102rpx;
+  height: 110rpx;
+  top: 190rpx;
+  opacity: .80; 
+}

@@ -1,8 +1,5 @@
 {
-    "navigationBarBackgroundColor": "#000",
-    "navigationBarTextStyle": "#fff",
     "navigationBarTitleText": "阅读",
     "backgroundColor": "#eeeeee",
-    "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
 }

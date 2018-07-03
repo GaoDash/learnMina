@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class='container'>
   <image class='user-avatar' src='../../assets/images/v2-4f96b4095f11618d6bc74b60bc6a4a76_t.jpg'></image>
-  <text>hello, 小楼</text>
+  <text class='hello'>hello, 小楼</text>
   <view class='page__bd'>
     <button bindtap='start'>开启小程序之旅</button>
   </view>

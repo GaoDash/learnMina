@@ -6,8 +6,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#b3d4bd",
-    "navigationBarTitleText": "ReadMovie",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#405f80",
+    "navigationBarTextStyle": "#fff"
   }
 }
