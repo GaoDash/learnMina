@@ -1,6 +1,7 @@
 <view class='page-container'>
   <image class='post-banner' src='{{headImgSrc}}'></image>
-  <image class='audio' src='/assets/images/music/music-start.png'></image>
+  <image class='audio' catchtap='onPlayMusic' 
+    src='{{isPlayMusic? "/assets/images/music/music-stop.png":"/assets/images/music/music-start.png"}}'></image>
   <view class='post-author'>
     <image src='{{avatar}}'></image>
     <text class='post-author-name'>{{author}}</text>
