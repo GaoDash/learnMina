@@ -50,17 +50,18 @@ Page({
     const _this = this;
     //通过全局变量记录播放器状态
     _this.setData({
-      isPlayMusic: app.globalData.G_playingMusic && app.globalData.G_playingMusicId ===               _this.data.postId
+      isPlayMusic: app.globalData.G_playingMusic && app.globalData.G_playingMusicId === _this.data.postId
     });
 
     //监听微信内置播放器的操作状态
-    wx.onBackgroundAudioPlay(function () {
+    wx.onBackgroundAudioPlay(function() {
       _this.setData({
         isPlayMusic: true
       });
       app.globalData.G_playingMusic = true;
       //记录当前播放的音乐ID
       app.globalData.G_playingMusicId = _this.data.postId;
+      console.log('AudioPlay')
     });
     wx.onBackgroundAudioPause(function() {
       _this.setData({
@@ -69,6 +70,7 @@ Page({
       app.globalData.G_playingMusic = false;
       //记录当前播放的音乐ID
       app.globalData.G_playingMusicId = null;
+      console.log('AudioPause')
     });
     wx.onBackgroundAudioStop(function(){
       _this.setData({
@@ -77,6 +79,7 @@ Page({
       app.globalData.G_playingMusic = false;
       //记录当前播放的音乐ID
       app.globalData.G_playingMusicId = null;
+      console.log('AudioStop')
     });
 
   },
@@ -108,6 +111,11 @@ Page({
     //播放处理
     if (this.data.isPlayMusic) {
       wx.pauseBackgroundAudio();
+      this.setData({
+        isPlayMusic: false
+      });
+      app.globalData.G_playingMusic = false;
+      app.globalData.G_playingMusicId = null;
     } 
     else {
       let music = this.data.music;
@@ -115,7 +123,12 @@ Page({
         dataUrl: music.url,
         title: music.title,
         coverImgUrl: music.coverImg
-      })
+      });
+      this.setData({
+        isPlayMusic: true
+      });
+      app.globalData.G_playingMusic = true;
+      app.globalData.G_playingMusicId = this.data.postId;
     }
   }
 })

@@ -1,0 +1,12 @@
+<import src='/templates/movie-template/movieList-template/movieList-template.wxml'/>
+<view class='page'>
+  <view class='movieList-block'>
+    <template is='movieListTemplate'/>
+  </view>
+  <view class='movieList-block'>
+    <template is='movieListTemplate'/>
+  </view>
+  <view class='movieList-block'>
+    <template is='movieListTemplate'/>
+  </view>
+</view>

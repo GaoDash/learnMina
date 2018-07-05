@@ -1,0 +1,8 @@
+@import "/templates/movie-template/movieList-template/movieList-template.wxss";
+
+.page{
+  background-color: #f2f2f2;
+}
+.movieList-block{
+  margin-bottom: 30rpx;
+}

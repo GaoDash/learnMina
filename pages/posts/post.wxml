@@ -3,10 +3,16 @@
 
 <view class='page'>
   <!--轮播-->
-  <swiper class='slider' indicator-dots='true' autoplay='true'>
-    <swiper-item><image src='/assets/images/vr.png'></image></swiper-item>
-    <swiper-item><image src='/assets/images/wx.png'></image></swiper-item>
-    <swiper-item><image src='/assets/images/iqiyi.png'></image></swiper-item>
+  <swiper catchtap='onSwiperTap' class='slider' indicator-dots='true' autoplay='true'>
+    <swiper-item>
+      <image src='/assets/images/vr.png' data-postId='4'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/assets/images/wx.png' data-postId='3'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/assets/images/iqiyi.png' data-postId='5'></image>
+    </swiper-item>
   </swiper>
 
   <!--新闻列表  -->

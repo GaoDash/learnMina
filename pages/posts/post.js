@@ -22,5 +22,12 @@ Page({
     wx.navigateTo({
       url: './post-detail/post-detail?id=' + postId
     })
+  },
+  //轮播组件的跳转，使用冒泡机制
+  onSwiperTap: function(event){
+    const postId = event.target.dataset.postid;
+    wx.navigateTo({
+      url: './post-detail/post-detail?id=' + postId
+    })
   }
 })

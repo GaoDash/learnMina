@@ -1,0 +1,20 @@
+@import "/templates/movie-template/stars-template/stars-template.wxss";
+
+.movie-container{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16rpx;
+}
+.movie-banner{
+  width: 200rpx;
+  height: 285rpx;
+  margin-bottom: 24rpx;
+}
+.movie-name{
+  font-size: 24rpx;
+  margin-bottom: 18rpx;
+  width: 200rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
