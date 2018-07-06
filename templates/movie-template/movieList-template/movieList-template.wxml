@@ -2,7 +2,7 @@
 <template name='movieListTemplate'>
   <view class='movieList-container'>
     <view class='movieList-head'>
-      <text class='movieList-slogan'>正在热映</text>
+      <text class='movieList-slogan'>{{movieCategory}}</text>
       <view class='moveList-more'>
         <text>更多</text><image src='/assets/images/icon/arrow-right.png'></image>
       </view>

@@ -21,19 +21,19 @@ Page({
     const comingsoonUrl = app.globalData.G_doubanBaseUrl + '/v2/movie/coming_soon' + '?start=0&count=3'; //即将上映
     const top250Url     = app.globalData.G_doubanBaseUrl + '/v2/movie/top250' + '?start=0&count=3';      //Top250
 
-    this.getMovieListData(inTheatersUrl, "inTheaters");
-    this.getMovieListData(comingsoonUrl, "comingsoon");
-    this.getMovieListData(top250Url, "top250");
+    this.getMovieListData(inTheatersUrl, "inTheaters", "正在热映");
+    this.getMovieListData(comingsoonUrl, "comingsoon", "即将上映");
+    this.getMovieListData(top250Url, "top250", "Top250");
   },
 
-  getMovieListData: function (url, settedKey){
+  getMovieListData: function (url, settedKey, movieCategory){
     const that = this;
     wx.request({
       url: url,
       method: 'GET',
       success: function (res) {
         //console.log(res.data)
-        that.handleMovieData(res.data, settedKey);
+        that.handleMovieData(res.data, settedKey, movieCategory);
       },
       fail: function (error) {
         console.log(error);
@@ -41,7 +41,7 @@ Page({
     });
   },
   //处理豆瓣api数据
-  handleMovieData: function(data, settedKey){
+  handleMovieData: function (data, settedKey, movieCategory){
     const movieItems = [];
     for (let subject of data.subjects){
       //console.log(subject);
@@ -59,7 +59,8 @@ Page({
     // readyData={"inTheaters":{"movies":[{…},{…},{…}]}}
     let readyData = {};
     readyData[settedKey] = {
-      "movies": movieItems
+      "movies": movieItems,
+      "movieCategory": movieCategory
     };
     console.log(readyData);
     this.setData(readyData);
