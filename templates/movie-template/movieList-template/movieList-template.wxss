@@ -17,8 +17,11 @@
 }
 .moveList-more{
   float: right;
+}
+.moveList-more text{
   color: #405f80;
 }
+
 .moveList-more image{
   width: 9rpx;
   height: 16rpx;

@@ -1,8 +1,8 @@
 <import src='/templates/movie-template/stars-template/stars-template.wxml' />
 <template name='movieTemplate'>
   <view class='movie-container'>
-    <image class='movie-banner' src='/assets/images/movie/p2391542403.jpg'></image>
-    <text class='movie-name'>比利·林恩的中场战事</text>
-    <template is='starsTemplate' />
+    <image class='movie-banner' src='{{coverUrl}}'></image>
+    <text class='movie-name'>{{title}}</text>
+    <template is='starsTemplate' data='{{average, stars}}' />
   </view>
 </template>
